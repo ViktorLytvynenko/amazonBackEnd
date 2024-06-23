@@ -4,8 +4,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import java.util.Map;
-
 @Document(collection = "sales")
 public class Data {
 
@@ -13,9 +11,17 @@ public class Data {
     private String id;
 
     @Field("year")
-    private Map<String, String> year;
+    private String year;
+
+    @Field("sales")
+    private String sales;
 
     public Data() {
+    }
+
+    public Data(String year, String sales) {
+        this.year = year;
+        this.sales = sales;
     }
 
     public String getId() {
@@ -26,19 +32,28 @@ public class Data {
         this.id = id;
     }
 
-    public Map<String, String> getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(Map<String, String> year) {
+    public void setYear(String year) {
         this.year = year;
+    }
+
+    public String getSales() {
+        return sales;
+    }
+
+    public void setSales(String sales) {
+        this.sales = sales;
     }
 
     @Override
     public String toString() {
         return "Data{" +
                 "id='" + id + '\'' +
-                ", year=" + year +
+                ", year='" + year + '\'' +
+                ", sales='" + sales + '\'' +
                 '}';
     }
 }
