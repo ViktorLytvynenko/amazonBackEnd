@@ -17,6 +17,7 @@ public class SalesService {
     }
 
     public List<Data> getAllData() {
+        System.out.println(collectionSalesDao.findAll());
         return collectionSalesDao.findAll();
     }
 }
