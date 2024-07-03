@@ -14,7 +14,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-//@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = {
+        "https://amazon-front-2v8b5i1a1-viktorlytvynenkos-projects.vercel.app",
+        "http://localhost:3000"
+}, allowedHeaders = "*")
 public class SalesController {
 
     private final SalesService salesService;
