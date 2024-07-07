@@ -16,6 +16,7 @@ import java.util.List;
 @RequestMapping("/api")
 @CrossOrigin(origins = {
         "https://amazon-front-2v8b5i1a1-viktorlytvynenkos-projects.vercel.app",
+        "https://amazon-front-end-one.vercel.app/",
         "http://localhost:3000"
 }, allowedHeaders = "*")
 public class SalesController {
