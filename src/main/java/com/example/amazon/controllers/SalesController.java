@@ -1,7 +1,7 @@
-package com.example.amazon.Controllers;
+package com.example.amazon.controllers;
 
-import com.example.amazon.Data;
-import com.example.amazon.Services.SalesService;
+import com.example.amazon.entity.Sales;
+import com.example.amazon.services.SalesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,8 +25,8 @@ public class SalesController {
     private final SalesService salesService;
 
     @GetMapping("/data")
-    public ResponseEntity<List<Data>> getAllData() {
-        List<Data> dataList = salesService.getAllData();
+    public ResponseEntity<List<Sales>> getAllData() {
+        List<Sales> dataList = salesService.getAllData();
         return new ResponseEntity<>(dataList, HttpStatus.OK);
     }
 }

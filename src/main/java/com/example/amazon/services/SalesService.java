@@ -1,7 +1,7 @@
-package com.example.amazon.Services;
+package com.example.amazon.services;
 
-import com.example.amazon.DAO.CollectionSalesDao;
-import com.example.amazon.Data;
+import com.example.amazon.dao.CollectionSalesDao;
+import com.example.amazon.entity.Sales;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.List;
 public class SalesService {
     private final CollectionSalesDao collectionSalesDao;
 
-    public List<Data> getAllData() {
+    public List<Sales> getAllData() {
         System.out.println(collectionSalesDao.findAll());
         return collectionSalesDao.findAll();
     }
