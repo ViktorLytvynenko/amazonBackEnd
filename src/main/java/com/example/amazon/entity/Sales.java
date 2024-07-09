@@ -28,13 +28,4 @@ public class Sales {
         this.year = year;
         this.sales = sales;
     }
-
-    @Override
-    public String toString() {
-        return "Data{" +
-                "id='" + id + '\'' +
-                ", year='" + year + '\'' +
-                ", sales='" + sales + '\'' +
-                '}';
-    }
 }
